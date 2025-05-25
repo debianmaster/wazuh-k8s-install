@@ -1,0 +1,12 @@
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: cert-waz-tls
+spec:
+  commonName: waz.ezy.dev
+  dnsNames:
+  - waz.ezy.dev
+  - www.waz.ezy.dev
+  issuerRef:
+    name: letsencrypt-prod
+  secretName: ezy-waz-tls
